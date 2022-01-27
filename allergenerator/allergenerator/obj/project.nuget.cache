@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GPF4mNFDmDb8qVKP8TyTIMxKjIR0B79mCfPmpzZq6PxuFSFz23dJZCuR2sL0on2LnBX/fiQjwYLJ5SHktIPYLg==",
+  "dgSpecHash": "INLGa8Fh0xRjZTisc+Cma6JQzrypIuFgY5s6DsoL5DxefLdi6tDFSusOEtx8fXJay/fEFHsSAA5HGiCNsDESGw==",
   "success": true,
   "projectFilePath": "/Users/Leon/Desktop/Liftoff/Allergenerator/allergenerator/allergenerator/allergenerator/allergenerator.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,10 @@
     "/Users/Leon/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.22/microsoft.extensions.logging.abstractions.3.1.22.nupkg.sha512",
     "/Users/Leon/.nuget/packages/microsoft.extensions.options/3.1.22/microsoft.extensions.options.3.1.22.nupkg.sha512",
     "/Users/Leon/.nuget/packages/microsoft.extensions.primitives/3.1.22/microsoft.extensions.primitives.3.1.22.nupkg.sha512",
+    "/Users/Leon/.nuget/packages/mysqlconnector/0.61.0/mysqlconnector.0.61.0.nupkg.sha512",
     "/Users/Leon/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/Leon/.nuget/packages/pomelo.entityframeworkcore.mysql/3.1.1/pomelo.entityframeworkcore.mysql.3.1.1.nupkg.sha512",
+    "/Users/Leon/.nuget/packages/pomelo.jsonobject/2.2.1/pomelo.jsonobject.2.2.1.nupkg.sha512",
     "/Users/Leon/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.0.4/sqlitepclraw.bundle_e_sqlite3.2.0.4.nupkg.sha512",
     "/Users/Leon/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
     "/Users/Leon/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.0.4/sqlitepclraw.lib.e_sqlite3.2.0.4.nupkg.sha512",

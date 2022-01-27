@@ -1,0 +1,60 @@
+﻿@model allergenerator.ViewModels.AddFoodSensitivityViewModel
+
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <a asp-controller="Home" asp-action="Index">Allergenerator</a>
+
+                </div>
+            </div>
+            <li><a id="#generate" asp-controller="Generator" asp-action="index">Generate a list!</a></li>
+            <li><a id="#learn" asp-controller="Sensitivity" asp-action="learn">Learn</a></li>
+            <li><a id="#faq" asp-controller="Home" asp-action="faq">FAQ</a></li>
+            <li><a id="#about" asp-controller="Home" asp-action="About">About Us</a></li>
+            <li><a id="#contact" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+
+                    <!-- Page Content -->
+
+                    <h1>Add Tag to Event: @Model.Food.Name</h1>
+
+                    <form asp-controller="Sensitivity" asp-action="AddFood" method="post">
+                        <input type="hidden" value="@Model.Food.Id" name="FoodId" />
+                        <div class="form-group">
+                            <label asp-for="SensitivityId">Sensitivity</label>
+                            <select asp-for="SensitivityId" asp-items="Model.Sensitivities"></select>
+                            <span asp-validation-for="SensitivityId"></span>
+                        </div>
+                        <input type="submit" value="Add Sensitivities" />
+                    </form>
+
+
+                    <!-- Page Content -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>

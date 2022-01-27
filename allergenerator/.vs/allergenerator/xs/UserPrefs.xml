@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{9B3EDA64-8FDB-42D4-8B8D-A064EFFA2C8D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="allergenerator/Views/Shared/_Layout.cshtml">
+    <Files>
+      <File FileName="allergenerator/Controllers/CategoryController.cs" Line="13" Column="49" />
+      <File FileName="allergenerator/Views/Home/Index.cshtml" />
+      <File FileName="allergenerator/Views/Shared/_Layout.cshtml" Line="15" Column="79" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="allergenerator" expanded="True">
+            <Node name="allergenerator" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Category" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="List" expanded="True" />
+                <Node name="Search" expanded="True" />
+                <Node name="Sensitivity" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.allergenerator PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Leon/Desktop/Liftoff/Allergenerator/allergenerator/allergenerator/allergenerator/wwwroot/css/site.css" relfile="allergenerator/wwwroot/css/site.css" line="213" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

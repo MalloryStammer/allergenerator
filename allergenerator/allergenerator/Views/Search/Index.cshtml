@@ -1,0 +1,92 @@
+﻿<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <div class="sidebar-header">
+                <div class="sidebar-brand">
+                    <a asp-controller="Home" asp-action="Index">Allergenerator</a>
+
+                </div>
+            </div>
+            <li><a id="#generate" asp-controller="Generator" asp-action="index">Generate a list!</a></li>
+            <li><a id="#learn" asp-controller="Sensitivity" asp-action="learn">Learn</a></li>
+            <li><a id="#faq" asp-controller="Home" asp-action="faq">FAQ</a></li>
+            <li><a id="#about" asp-controller="Home" asp-action="About">About Us</a></li>
+            <li><a id="#contact" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+
+                    <!-- Page Content -->
+
+                    <div class="container body-content">
+
+                        <h1>@ViewBag.title</h1>
+
+                        <form action="/search/results" method="post">
+                            <h2>Search by:</h2>
+
+                            <p>
+                                @foreach (var column in ViewBag.columns)
+                                {
+                                    <span>
+                                        <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
+                                        <label for="@column.Key">@column.Value</label>
+                                    </span>
+                                }
+
+                            </p>
+
+                            <p>
+                                <label for="searchTerm">Keyword:</label>
+                                <input type="text" name="searchTerm" id="searchTerm" />
+                            </p>
+
+                            <input type="submit" value="Search" />
+                        </form>
+
+                        <hr />
+
+                        @if (ViewBag.foods != null)
+                        {
+                            <table>
+                                @foreach (var food in ViewBag.foods)
+                                {
+                                    <tr>
+                                        <td>
+                                            <p>ID: @food.FoodId</p>
+                                            <p>Name: @food.Name</p>
+                                            <p>Category: @food.CategoryName</p>
+                                            <p>Sensitivity: @food.SensitivityText</p>
+                                        </td>
+                                    </tr>
+                                }
+                            </table>
+                        }
+
+
+                    </div>
+
+
+                    <!-- Page Content -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
