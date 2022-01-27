@@ -9,27 +9,30 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" src="script.js"></script>
+
+
 </head>
 <body>
     <header>
         <!--<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">-->
+        <div class="container">-->
         @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">allergenerator</a>*@
         <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"-->
         @*aria-expanded="false" aria-label="Toggle navigation">*@
         <!--<span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <partial name="_LoginPartial" />
-                    <ul class="navbar-nav flex-grow-1">
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <partial name="_LoginPartial" />
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+                </ul>
             </div>
-        </nav>-->
+        </div>
+    </nav>-->
 
     </header>
 
@@ -50,16 +53,55 @@
 
                             </div>
                         </div>
-                        <li><a id="#generate" asp-controller="Generator" asp-action="index">Generate a list!</a></li>
-                        <li><a id="#learn" asp-controller="sensitivities" asp-action="index">Learn</a></li>
+                        @*<li><a id="#generate" asp-controller="Generator" asp-action="index">Generate a list!</a></li>*@
+                        <li><a id="#learn" asp-controller="Sensitivity" asp-action="learn">Learn</a></li>
                         <li><a id="#faq" asp-controller="Home" asp-action="faq">FAQ</a></li>
-                        <li><a id="#about" asp-controller="Home" asp-action="About">AboutUs</a></li>
-                        <li><a id="#contact" asp-controller="Home" asp-action="About">AboutUs</a></li>
+                        <li><a id="#about" asp-controller="Home" asp-action="About">About Us</a></li>
+                        <li><a id="#contact" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                        @*<li><partial name="_LoginPartial" /></li>*@
+                        <li><a id="#register" asp-area="Identity" asp-page="/Account/Register">Register</a></li>
+                        <li><a id="#login" asp-area="Identity" asp-page="/Account/Login">Login</a>
 
-                        @*<li><a id="#learn" asp-controller="sensitivities" asp-action="index">Learn</a></li>*@
-                        @*<li><a id="#learn" asp-controller="sensitivities" asp-action="index">Learn</a></li>*@
 
-                        @*<li class="dropdown">
+                    </ul>
+
+
+                </nav>
+                <!-- /#sidebar-wrapper -->
+                <div id="page-button-wrapper">
+
+
+                    <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                        <span class="hamb-top"></span>
+                        <span class="hamb-middle"></span>
+                        <span class="hamb-bottom"></span>
+                    </button>
+
+
+                    @*<div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">*@
+                                <!-- Page Content -->
+
+                                @*<h1>Allergenerator</h1>
+                                <br />
+                                <br />
+
+                                <a asp-controller="Generator" asp-action="index">Generate a list!</a>*@
+
+
+                                <!-- Page Content -->
+
+                            @*</div>*@
+                        @*</div>*@
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+            </div>
+
+
+                
+                @*<li class="dropdown">
         <a href="#works" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
         <ul class="dropdown-menu animated fadeInLeft" role="menu">
             <div class="dropdown-header">Dropdown heading</div>
@@ -69,27 +111,6 @@
             <li><a href="#art">Art</a></li>
             <li><a href="#awards">Awards</a></li>
         </ul>*@
-
-                    </ul>
-                </nav>
-                <!-- /#sidebar-wrapper -->
-                <!-- Page Content -->
-                <!--<div id="page-content-wrapper">
-                    <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-                        <span class="hamb-top"></span>
-                        <span class="hamb-middle"></span>
-                        <span class="hamb-bottom"></span>
-                    </button>-->
-                    @*<div class="container">
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <h1>Fancy Toggle Sidebar Navigation</h1>
-                            <a asp-controller="Generator" asp-action="index">Generate a list!</a>
-                        </div>
-                    </div>
-                </div>*@
-                <!--</div>-->
-                <!-- /#page-content-wrapper -->
 
             </div>
 

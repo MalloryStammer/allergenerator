@@ -24,5 +24,8 @@
 
     $('[data-toggle="offcanvas"]').click(function () {
         $('#wrapper').toggleClass('toggled');
+        $('##page-content-wrapper').toggleClass('toggled');
+        $('##page-button.-wrapper').toggleClass('toggled');
+
     });
 });

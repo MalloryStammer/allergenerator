@@ -57,17 +57,26 @@ html {
 #page-content-wrapper {
     width: 100%;
     padding-top: 70px;
+    padding-left: 220px;
 }
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -220px;
 }
+#page-burger-wrapper {
+    width: 100%;
+    padding-top: 70px;
+}
 
-/*-------------------------------*/
-/*     Sidebar nav styles        */
-/*-------------------------------*/
-.navbar {
+#wrapper.toggled #page-burger-wrapper {
+    position: absolute;
+    margin-right: -220px;
+}
+    /*-------------------------------*/
+    /*     Sidebar nav styles        */
+    /*-------------------------------*/
+    .navbar {
     padding: 0;
 }
 

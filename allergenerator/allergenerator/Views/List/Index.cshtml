@@ -1,91 +1,60 @@
-﻿<div id="wrapper">
-    <div class="overlay"></div>
+﻿
+<script type="text/javascript" src="script.js"></script>
+<head>
 
-    <!-- Sidebar -->
-    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-        <ul class="nav sidebar-nav">
-            <div class="sidebar-header">
-                <div class="sidebar-brand">
-                    <a asp-controller="Home" asp-action="Index">Allergenerator</a>
-
-                </div>
-            </div>
-            <li><a id="#generate" asp-controller="Generator" asp-action="index">Generate a list!</a></li>
-            <li><a id="#learn" asp-controller="Sensitivity" asp-action="learn">Learn</a></li>
-            <li><a id="#faq" asp-controller="Home" asp-action="faq">FAQ</a></li>
-            <li><a id="#about" asp-controller="Home" asp-action="About">About Us</a></li>
-            <li><a id="#contact" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
-
-        </ul>
-    </nav>
-    <!-- /#sidebar-wrapper -->
-    <div id="page-content-wrapper">
-        <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
-            <span class="hamb-top"></span>
-            <span class="hamb-middle"></span>
-            <span class="hamb-bottom"></span>
-        </button>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-
-
-                    <!-- Page Content -->
-
-                    <div class="container body-content">
-                        <h1>@ViewBag.title</h1>
-                        <h2 class="centered">View Foods By Category</h2>
-                    </div>
-
-                    <table class="centeredTable">
-                        <tr>
-                            @foreach (var column in ViewBag.columns)
-                            {
-                                @if (column.Key != "all")
-                                {
-                                    <th>@column.Value</th>
-                                }
-                            }
-                        </tr>
-                        <tr>
-                            @foreach (var category in ViewBag.tableChoices)
-                            {
-                                <td>
-                                    <ul>
-                                        @if (category == "category")
-                                        {
-                                            @foreach (var item in ViewBag.categories)
-                                            {
-                                                <li>
-                                                    <a asp-controller="List" asp-action="Foods" asp-route-column="@category" asp-route-value="@item.Name">@item.Name</a>
-                                                </li>
-                                            }
-                                        }
-                                        else
-                                        {
-                                            @foreach (var item in ViewBag.skills)
-                                            {
-                                                <li>
-                                                    <a asp-controller="List" asp-action="Foods" asp-route-column="@category" asp-route-value="@item.Name">@item.Name</a>
-                                                </li>
-                                            }
-                                        }
-
-                                    </ul>
-                                </td>
-                            }
-                        </tr>
-                    </table>
+</head>
 
 
 
-                    <!-- Page Content -->
+<div id="page-content-wrapper" style=" padding: 70px 70px 70px 220px">
+    <!-- Page Content -->
 
-
-                </div>
-            </div>
-        </div>
+    <div class="container body-content">
+        <h1>@ViewBag.title</h1>
+        <h2 class="centered">View Foods By Category</h2>
     </div>
-    <!-- /#page-content-wrapper -->
+
+    <table class="centeredTable">
+        <tr>
+            @foreach (var column in ViewBag.columns)
+            {
+                @if (column.Key != "all")
+                {
+                    <th>@column.Value</th>
+                }
+            }
+        </tr>
+        <tr>
+            @foreach (var category in ViewBag.tableChoices)
+            {
+                <td>
+                    <ul>
+                        @if (category == "category")
+                        {
+                            @foreach (var item in ViewBag.categories)
+                            {
+                                <li>
+                                    <a asp-controller="List" asp-action="Foods" asp-route-column="@category" asp-route-value="@item.Name">@item.Name</a>
+                                </li>
+                            }
+                        }
+                        else
+                        {
+                            @foreach (var item in ViewBag.skills)
+                            {
+                                <li>
+                                    <a asp-controller="List" asp-action="Foods" asp-route-column="@category" asp-route-value="@item.Name">@item.Name</a>
+                                </li>
+                            }
+                        }
+
+                    </ul>
+                </td>
+            }
+        </tr>
+    </table>
+
+    <!-- Page Content -->
 
 </div>
+<!-- /#page-content-wrapper -->
